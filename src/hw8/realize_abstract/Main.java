@@ -1,6 +1,5 @@
-package hw8.realiz_interfase;
+package hw8.realize_abstract;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {

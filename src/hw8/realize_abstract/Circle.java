@@ -1,6 +1,6 @@
-package hw8.realiz_interfase;
+package hw8.realize_abstract;
 
- class Circle implements Shape{
+class Circle implements Shape {
     private static final String name = "circule";
     private double radius;
     public double square;

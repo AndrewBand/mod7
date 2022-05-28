@@ -1,4 +1,4 @@
-package hw8.realiz_interfase;
+package hw8.realize_abstract;
 
 interface Shape {
 
