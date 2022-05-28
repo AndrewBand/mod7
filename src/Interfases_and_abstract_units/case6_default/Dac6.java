@@ -1,10 +1,10 @@
 package Interfases_and_abstract_units.case6_default;
 
-class Dac2 extends Bird2 implements Flyiable2{
+class Dac6 extends Bird6 implements Flyiable6 {
     private String color;
     private int weight;
 
-    public Dac2(String color, int weight) {
+    public Dac6(String color, int weight) {
         this.color = color;
         this.weight=weight;
 
@@ -42,6 +42,6 @@ class Dac2 extends Bird2 implements Flyiable2{
 
     @Override
     public void defFlay() {
-        Flyiable2.super.defFlay();
+        Flyiable6.super.defFlay();
     }
 }
