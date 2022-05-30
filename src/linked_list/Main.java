@@ -18,7 +18,7 @@ public class Main {
         list.add("aa");
         list.add("bb");
 
-        list.addAll(listB);
+        list.addAll(0,listB);
         System.out.println(list);
 
     }
