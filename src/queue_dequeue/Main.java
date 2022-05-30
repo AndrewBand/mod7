@@ -1,11 +1,13 @@
 package queue_dequeue;
 
 import java.util.LinkedList;
+import java.util.PriorityQueue;
 import java.util.Queue;
 
 public class Main {
     public static void main(String[] args) {
-        Queue<String> queue = new LinkedList<>();
+        Queue<String> queue = new PriorityQueue<>();
+        // добавляє сортування на основі пріорітета
         queue.add("BB");
         queue.add("AA");
         queue.add("XX");
