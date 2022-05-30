@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Animals dac = new Dac("red", 5);
         System.out.println("dac.getColor() = " + dac.getColor());
-        System.out.println("dac.getWaigh() = " + dac.getWaigh());
+        System.out.println("dac.getWaigh() = " + dac.getWeight());
         dac.aboutAnimal();
         ((Dac) dac).flay();
         ((Dac) dac).defFlay1();

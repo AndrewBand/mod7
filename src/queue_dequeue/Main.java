@@ -1,31 +1,26 @@
 package queue_dequeue;
 
-import java.util.LinkedList;
-import java.util.PriorityQueue;
-import java.util.Queue;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        Queue<String> queue = new PriorityQueue<>();
+        Deque<String> dequeue = new LinkedList<>();
         // добавляє сортування на основі пріорітета
-        queue.add("BB");
-        queue.add("AA");
-        queue.add("XX");
-        queue.add("AA");
-        queue.offer("YY");
-        System.out.println("Before changes " + queue);
-        queue.remove();
-        // вернемо елемент який хочпмо видалити:
-        String rem = queue.remove();
-        System.out.println("rem = " + rem);
-        System.out.println("After remove " + queue);
-        String pool = queue.poll();
-        System.out.println("After remove poll " + pool+ " " + queue);
+        dequeue.add("BB");
+        dequeue.add("AA");
+        dequeue.add("XX");
+        dequeue.add("AA");
+        dequeue.offer("YY");
 
-        String element = queue.element();
-        System.out.println("element " + element + " " + queue);
+        dequeue.addFirst("ZIKA");
+        dequeue.addLast("BUKA");
 
-        String peek = queue.peek();
-        System.out.println("peek " + peek + " " + queue);
+        System.out.println(dequeue);
+        Iterator x = dequeue.descendingIterator();
+
+        while (x.hasNext()) {
+                System.out.print(" " + x.next());
+            }
+
     }
 }
