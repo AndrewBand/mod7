@@ -6,8 +6,8 @@ public class Main {
         System.out.println("dac.getColor() = " + dac.getColor());
         System.out.println("dac.getWaigh() = " + dac.getWeight());
         dac.aboutAnimal();
-        ((Dac) dac).flay();
-        ((Dac) dac).defFlay1();
-        ((Dac) dac).defFlay2();
+        dac.flay();
+        dac.defFlay1();
+        dac.defFlay2();
     }
 }

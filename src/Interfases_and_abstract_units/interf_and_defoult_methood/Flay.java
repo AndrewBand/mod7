@@ -1,7 +1,7 @@
 package Interfases_and_abstract_units.interf_and_defoult_methood;
 
  interface Flay {
-    void flay();
+    void flay() ;
 
     default void defFlay() {
         System.out.println("Def flay");

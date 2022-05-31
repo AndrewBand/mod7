@@ -1,12 +1,14 @@
 package Interfases_and_abstract_units.interf_and_defoult_methood;
 
-abstract class Animals {
+abstract class Animals  implements Flay{
 private String color;
-private int waigh;
+private int weight;
 
-    public Animals(String color, int waigh) {
+    public Animals(String color, int weight) {
         this.color = color;
-        this.waigh = waigh;
+        this.weight = weight;
+        System.out.println("Constructor set color weight");
+        System.out.println(Math.PI*weight*weight);
     }
 
     public String getColor() {
@@ -17,15 +19,15 @@ private int waigh;
         this.color = color;
     }
 
-    public int getWaigh() {
-        return waigh;
+    public int getWeight() {
+        return weight;
     }
 
-    public void setWaigh(int waigh) {
-        this.waigh = waigh;
+    public void setWeight(int weight) {
+        this.weight = weight;
     }
     public void aboutAnimal() {
-        System.out.println(" aboutAnimal Color: " + color + ", waight= " + waigh);
+        System.out.println(" aboutAnimal Color: " + color + ", weight= " + weight);
     }
 
 }

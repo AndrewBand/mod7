@@ -1,6 +1,6 @@
 package Interfases_and_abstract_units.interf_and_defoult_methood;
 
-public class Dac extends Animals implements Flay{
+public class Dac extends Animals{
 //    private String color;
 //    private int waigh;
 
@@ -22,12 +22,12 @@ public class Dac extends Animals implements Flay{
 
     @Override
     public void defFlay1() {
-        Flay.super.defFlay1();
-//        System.out.println("Dac overrides defFlay");
+//        Flay.super.defFlay1();
+        System.out.println("Dac overrides defFlay");
     }
-
-    @Override
-    public void defFlay2() {
-        Flay.super.defFlay2();
-    }
+//
+//    @Override
+//    public void defFlay2() {
+//        Flay.super.defFlay2();
+//    }
 }
