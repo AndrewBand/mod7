@@ -7,14 +7,11 @@ package generic;
  * T - type
  * S,U,V - new next one by one
  * ? - if wee do not know what type will be
- *
  */
 
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
 
 public class GenericDemo {
     public static void main(String[] args) {
@@ -64,30 +61,53 @@ public class GenericDemo {
             System.out.println("can do that");
             Integer elemI = (Integer) generObject;
             System.out.println("elemI = " + elemI);
-
-
         }
 
         System.out.println("=====GENERIC====");
 
-        GenericTipe<Integer> genericTipe = new GenericTipe<>();
+        GenericType<Integer> genericTypeInt = new GenericType<>();
 
-        genericTipe.setType(100);
+        genericTypeInt.setType(100);
 
         //do chek (if Obgect is Integer) no need, Java don't give add another type
 //        genericTipe.setType("HI"); // anderline red "incompatible types"
-        System.out.println("genericTipe.getType() = " + genericTipe.getType());
+        System.out.println("genericTipeInt.getType() = " + genericTypeInt.getType());
 
-        GenericTipe<String> genericTipeString = new GenericTipe<>();
+        GenericType<String> genericTipeString = new GenericType<>();
 
         genericTipeString.setType("Hello WORLD!");
-        System.out.println("genericTipe.getType() = " + genericTipe.getType());
+        System.out.println("genericTypeString.getType() = " + genericTipeString.getType());
+
+        System.out.println("=====GENERIC examplead realisation====");
+        GenericType<Integer> genericTypeInt2 = new GenericType<>();
+        genericTypeInt2.setType(100);
+        final boolean equalBool = GenericUtils.isEquals(genericTypeInt, genericTypeInt2);
+        // разного типа в сравнение не попадают             ^                ^
+        System.out.println("equalBool = " + equalBool);
+        final boolean equalDifTypeBool = GenericUtils.isEqualsDifType(genericTipeString, genericTypeInt);
+        System.out.println("equalDifTypeBool = " + equalDifTypeBool);
+
+        System.out.println("=====наследование типов====");
+        Integer elem = 10;
+        Object obgect = null;
+        obgect = elem;
+        System.out.println("obgect = " + obgect);
+
+        System.out.println("=====наследование типов и привидение к обектам не работает," +
+                " нет такого наследования====");
+        List<Integer> list = new ArrayList<>();
+        List<Object> objects2 = null;
+//        objects2 = list; // error
+
+
+
 
 
     }
+
     public static void printElement(List list) {
         // list  не типізований тому він Object
-        for (Object elem:list) {
+        for (Object elem : list) {
             System.out.println((String) elem);
         }
     }

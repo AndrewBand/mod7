@@ -1,6 +1,6 @@
 package generic;
 
-public class GenericTipe<T> {
+public class GenericType<T> {
     // T - type , this will be method whith be wokr whos it (this type)
 
     private T type;

@@ -4,34 +4,19 @@ public class Dac extends Animals implements Flay{
 //    private String color;
 //    private int waigh;
 
-    public Dac(String color, int waigh) {
-        super(color, waigh);
+
+    public Dac(String colorD, int weightD) {
+        super(colorD, weightD);
+        System.out.println("Construktor Dac set");
     }
-//
-//    @Override
-//    public String getColor() {
-//        return color;
-//    }
-//
-//    @Override
-//    public void setColor(String color) {
-//        this.color = color;
-//    }
-//
-//    @Override
-//    public int getWaigh() {
-//        return waigh;
-//    }
-//
-//    @Override
-//    public void setWaigh(int waigh) {
-////        this.waigh = waigh;
-//        super(waigh);
-//    }
+
+    void quantityWool() {
+        System.out.println("Quantity of Wool = " + getWeight()*0.23);
+    }
 
     @Override
     public void flay() {
-        System.out.println("Override defFlay dy Dac class. Color: " + getColor() + " weitht= " + getWaigh());
+        System.out.println("Override defFlay dy Dac class. Color: " + super.getColor() + " weitht= " + getWeight());
 //        System.out.println("Override flay dy Dac class. Color: " + color + " weitht= " + waigh);
     }
 
