@@ -11,7 +11,7 @@ public class GenericType<T extends Number> {
 /*
 
     public T getType() {
-        return type; // <<< ???
+        return type;      // <<<<<<<<<< ???
     }
 */
 
