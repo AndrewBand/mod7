@@ -53,7 +53,7 @@ public class GenericDemo {
             final String elem = (String) generikTypeOLd.getType();
             System.out.println(elem);
         } else if (generObject instanceof Integer) {
-            System.err.println("Type in not a String. Bat no problem");
+            System.err.println("Type in not a String111111. Bat no problem");
             final String elem = (String) generikTypeOLd.getType().toString();
             System.out.println("elem = " + elem);
             System.out.println("elem = " + elem + 1);
@@ -61,6 +61,7 @@ public class GenericDemo {
             System.out.println("can do that");
             Integer elemI = (Integer) generObject;
             System.out.println("elemI = " + elemI);
+            System.err.println("Type in not a String22222. Bat no problem");
         }
 
         System.out.println("=====GENERIC====");
@@ -78,7 +79,7 @@ public class GenericDemo {
         genericTipeString.setType("Hello WORLD!");
         System.out.println("genericTypeString.getType() = " + genericTipeString.getType());
 
-        System.out.println("=====GENERIC examplead realisation====");
+        System.out.println("=====GENERIC example realisation====");
         GenericType<Integer> genericTypeInt2 = new GenericType<>();
         genericTypeInt2.setType(100);
         final boolean equalBool = GenericUtils.isEquals(genericTypeInt, genericTypeInt2);
