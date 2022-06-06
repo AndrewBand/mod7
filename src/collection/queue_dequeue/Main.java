@@ -1,4 +1,4 @@
-package queue_dequeue;
+package collection.queue_dequeue;
 
 import java.util.*;
 
