@@ -1,4 +1,4 @@
-package collection.hash_mnap;
+package collection.hash_map;
 
 import java.util.HashMap;
 import java.util.Map;
