@@ -21,6 +21,22 @@ public class Main {
         while (x.hasNext()) {
                 System.out.print(" " + x.next());
             }
+        System.out.println("\n -------Queue------------------");
+Queue<String> qq = new LinkedList<>();
+        qq.add("AA");
+        qq.add("Ab");
+        qq.add("Ac");
+        qq.add("Ad");
+        System.out.println("qq = " + qq);
+        qq.remove("AA");
+        System.out.println("qq = " + qq);
+//qq.clear();
+        System.out.println("qq = " + qq);
+        System.out.println("qq.peek() = " + qq.peek());
+        System.out.println("qq = " + qq);
+        System.out.println("qq.poll() = " + qq.poll());
+        System.out.println("qq = " + qq);
+
 
     }
 }
