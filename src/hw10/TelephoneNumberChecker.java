@@ -16,22 +16,30 @@ class TelephoneNumberChecker {
             while ((line = br.readLine()) != null) {
                 if (!line.isEmpty() && !line.isBlank()) {
                     ar.add(line);
-
-                    System.out.println(line);
                 }
             }
         } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Unable to read file: " + file.toString());
         }
-        String regex = "(.*)\\(?\\d{3}\\)?[\\s-]\\d{3}-\\d{4}(.*)";
-        Pattern pattern = Pattern.compile(regex);
+        String regex1 = "\\(\\d{3}\\)[\\s]\\d{3}-\\d{4}";
+        String regex2 = "\\d{3}-\\d{3}-\\d{4}";
+        Pattern pattern = Pattern.compile(regex1);
+        Pattern pattern2 = Pattern.compile(regex2);
 
         File fileOut = new File(fileOutName);
 
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(fileOut))) {
             for (int i = 0; i < ar.size(); i++) {
                 Matcher matcher = pattern.matcher(ar.get(i));
+                Matcher matcher2 = pattern2.matcher(ar.get(i));
                 if (matcher.matches()) {
                     bw.write(ar.get(i) + "\n\n");
+                    System.out.println(ar.get(i));
+                }
+                if (matcher2.matches()) {
+                    bw.write(ar.get(i) + "\n\n");
+                    System.out.println(ar.get(i));
                 }
             }
         } catch (IOException e) {
