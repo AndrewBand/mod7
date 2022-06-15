@@ -1,6 +1,6 @@
 name age
 alice 21
 ryan 30
-dima 7.5
+dima 7
 kor 33
 Andre 38

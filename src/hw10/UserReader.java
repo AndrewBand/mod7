@@ -12,7 +12,7 @@ class UserReader {
         File fileOut2 = new File(fileOutName);
         FileWriter fw = null;
 
-        try  {
+        try {
             fw = new FileWriter(fileOut2);
         } catch (IOException e) {
             e.printStackTrace();
