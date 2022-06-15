@@ -4,6 +4,7 @@ public class MyLinkedList {
     transient int size = 0;
     transient Node first;
     transient Node last;
+
     private static class Node {
         Object item;
         Node next;

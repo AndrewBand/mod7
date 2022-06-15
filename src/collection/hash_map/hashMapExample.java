@@ -25,8 +25,11 @@ public class hashMapExample {
 
         Map<String, String> map = new HashMap<>();
         map.put("Germany", "Berlin");
-        map.put("Ukrain", "Kiev");
         map.put("Spain", "Madrid");
+        map.put("Ukrain", "Kiev");
+        map.put("Spain", "MadridO");
+        map.put(null, null);
+        map.put(null, null);
         System.out.println("map = " + map);
 
         Set<Map.Entry<String, String>> entrys = map.entrySet();
@@ -34,6 +37,7 @@ public class hashMapExample {
             System.out.println("Entry:");
             System.out.println("Key= " + entry.getKey());
             System.out.println("Value= " + entry.getValue());
+            System.out.println("-----------------------------");
         }
     }
 }

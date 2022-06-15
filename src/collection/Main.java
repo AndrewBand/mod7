@@ -42,5 +42,8 @@ public class Main {
             iterator.next();
             iterator.remove();
         }
+
+        int i = 0 & 2;
+        System.out.println("i = " + i);
     }
 }

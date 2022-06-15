@@ -1,6 +1,7 @@
 package collection.hash_map;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class HashMapWithCustomKey {
@@ -30,6 +31,11 @@ public class HashMapWithCustomKey {
 //
 // а ось після:
 // emm = {{Employee: id=1, name=Di}=Londin}
+
+
+//        LinkedHashMap
+//це та ж - HashMap + зберіга порядок збереження елементів(додаткова структура даних (схоже на LinkedList))
+        Map<String,String> linkedMap = new LinkedHashMap<>();
 
     }
 }

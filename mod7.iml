@@ -7,5 +7,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="hisrc.jsonix.schema.compiler" level="project" />
+    <orderEntry type="library" name="jsonschema2pojo.maven.plugin" level="project" />
   </component>
 </module>
