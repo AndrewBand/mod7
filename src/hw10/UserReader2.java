@@ -16,7 +16,7 @@ class UserReader2 {
 
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             while ((line = br.readLine()) != null) {
-                if (!line.isEmpty() && !line.isBlank() && !line.contains("age")) {
+                if (!line.isEmpty() && !line.isBlank() && !line.contains("name age")) {
                     ar.add(new Person(String.valueOf(line.split(" ")[0]), Integer.valueOf(line.split(" ")[1])));
                 }
             }

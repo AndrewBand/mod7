@@ -8,8 +8,8 @@ public class Main {
         UserReader ur = new UserReader();
 //        final String inPath = "C:/Users/Banduryst-A/IdeaProjects/mod7/src/hw10/file.txt";
         final String inPath = "file.txt";
-        final String outPath = "fileOut.txt";
-//        ur.readTxtToJson(inPath, outPath);
+        final String outPath = "fileOut.json";
+        ur.readTxtToJson(inPath, outPath);
 
         UserReader2 urG = new UserReader2();
         final String inPath2 = "file2.txt";
