@@ -11,7 +11,7 @@ public class Main {
         final String outPath = "fileOut.json";
         ur.readTxtToJson(inPath, outPath);
 
-        UserReader2 urG = new UserReader2();
+        UserReaderJson urG = new UserReaderJson();
         final String inPath2 = "file2.txt";
         final String outPath2 = "fileOutGson.txt";
         urG.readTxtToJson(inPath2, outPath2);

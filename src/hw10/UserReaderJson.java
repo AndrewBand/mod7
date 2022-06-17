@@ -6,7 +6,7 @@ import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
-class UserReader2 {
+class UserReaderJson {
     public void readTxtToJson(String fileInName, String fileOutName) {
         ArrayList<Person> ar = new ArrayList<Person>();
         String line = null;
