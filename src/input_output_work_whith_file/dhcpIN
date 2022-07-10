@@ -1,413 +1,203 @@
-ip dhcp pool VoIP
- network 10.253.38.0 255.255.255.0
- default-router 10.253.38.1
- dns-server 192.168.0.5 192.168.0.6
- domain-name mc.gcf
-ip dhcp pool WiFi-AP
- network 10.64.38.0 255.255.255.192
- default-router 10.64.38.1
+ip dhcp pool Credits
+ network 10.133.84.0 255.255.255.240
+ default-router 10.133.84.1
+ dns-server 10.128.1.3 10.128.1.4
+ lease 2
+ip dhcp pool ITMaster
+ vrf Inet-DG
+ network 10.135.84.32 255.255.255.224
+ default-router 10.135.84.33
+ dns-server 8.8.8.8 8.8.4.4
+ lease 0 3
+ip dhcp pool Foxseller
+ network 10.144.84.0 255.255.255.224
+ default-router 10.144.84.1
+ dns-server 10.128.1.3 10.128.1.4
+ip dhcp pool WiFi-AP1
+ host 10.254.84.4 255.255.255.240
+ client-identifier 0170.f096.cc63.30
+ default-router 10.254.84.1
  option 43 hex f108.0afe.1fe6.0afe.1fe8
- dns-server 192.168.0.5 192.168.0.6
-ip dhcp pool Printscaner
- host 10.64.38.131 255.255.255.128
- hardware-address 0007.4d46.f274
- default-router 10.64.38.129
- dns-server 192.168.0.5 192.168.0.6
- domain-name mc.gcf
+ip dhcp pool WiFi-AP2
+ host 10.254.84.5 255.255.255.240
+ client-identifier 0170.f096.ce02.a8
+ default-router 10.254.84.1
+ option 43 hex f108.0afe.1fe6.0afe.1fe8
+ip dhcp pool wskhaftd0311
+ host 192.168.84.11 255.255.255.192
+ client-identifier 01a4.bb6d.77fb.02
+ default-router 192.168.84.1
+ dns-server 10.128.1.3 10.128.1.4
+ip dhcp pool wskhaftd0312
+ host 192.168.84.12 255.255.255.192
+ client-identifier 01a4.bb6d.783d.8d
+ default-router 192.168.84.1
+ dns-server 10.128.1.3 10.128.1.4
+ip dhcp pool wskhaftd0313
+ host 192.168.84.13 255.255.255.192
+ client-identifier 01a4.bb6d.7806.e0
+ default-router 192.168.84.1
+ dns-server 10.128.1.3 10.128.1.4
+ip dhcp pool wskhaftd0314
+ host 192.168.84.14 255.255.255.192
+ client-identifier 01a4.bb6d.7808.2a
+ default-router 192.168.84.1
+ dns-server 10.128.1.3 10.128.1.4
+ip dhcp pool wskhaftd0315
+ host 192.168.84.15 255.255.255.192
+ client-identifier 01a4.bb6d.783a.17
+ default-router 192.168.84.1
+ dns-server 10.128.1.3 10.128.1.4
+ip dhcp pool wskhaftd0316
+ host 192.168.84.16 255.255.255.192
+ client-identifier 01a4.bb6d.783f.6a
+ default-router 192.168.84.1
+ dns-server 10.128.1.3 10.128.1.4
+ip dhcp pool wskhaftd0317
+ host 192.168.84.17 255.255.255.192
+ client-identifier 01a4.bb6d.783f.64
+ default-router 192.168.84.1
+ dns-server 10.128.1.3 10.128.1.4
+ip dhcp pool wskhaftd0318
+ host 192.168.84.18 255.255.255.192
+ client-identifier 01a4.bb6d.7806.af
+ default-router 192.168.84.1
+ dns-server 10.128.1.3 10.128.1.4
+ip dhcp pool wskhaftd0319
+ host 192.168.84.19 255.255.255.192
+ client-identifier 01a4.bb6d.783f.5c
+ default-router 192.168.84.1
+ dns-server 10.128.1.3 10.128.1.4
+ip dhcp pool wskhaftd0320
+ host 192.168.84.20 255.255.255.192
+ client-identifier 01a4.bb6d.783f.94
+ default-router 192.168.84.1
+ dns-server 10.128.1.3 10.128.1.4
+ip dhcp pool wskhaftd0321
+ host 192.168.84.21 255.255.255.192
+ client-identifier 01a4.bb6d.7806.a8
+ default-router 192.168.84.1
+ dns-server 10.128.1.3 10.128.1.4
+ip dhcp pool wskhaftd0322
+ host 192.168.84.22 255.255.255.192
+ client-identifier 01a4.bb6d.783d.c6
+ default-router 192.168.84.1
+ dns-server 10.128.1.3 10.128.1.4
+ip dhcp pool wskhaftd0324
+ host 192.168.84.24 255.255.255.192
+ default-router 192.168.84.1
+ dns-server 10.128.1.3 10.128.1.4
+ip dhcp pool wskhaftd0325
+ host 192.168.84.25 255.255.255.192
+ client-identifier 013c.7c3f.bc05.97
+ default-router 192.168.84.1
+ dns-server 10.128.1.3 10.128.1.4
+ip dhcp pool wskhaftd0326
+ host 192.168.84.26 255.255.255.192
+ default-router 192.168.84.1
+ dns-server 10.128.1.3 10.128.1.4
+ip dhcp pool wskhaftd0327
+ host 192.168.84.27 255.255.255.192
+ client-identifier 013c.7c3f.bc06.d4
+ default-router 192.168.84.1
+ dns-server 10.128.1.3 10.128.1.4
+ip dhcp pool wskhaftd0328
+ host 192.168.84.28 255.255.255.192
+ client-identifier 013c.7c3f.bc01.c5
+ default-router 192.168.84.1
+ dns-server 10.128.1.3 10.128.1.4
+ip dhcp pool SmartTV
+ vrf Inet-DG
+ network 10.135.84.0 255.255.255.224
+ dns-server 8.8.8.8 8.8.4.4
+ default-router 10.135.84.1
+ lease 0 3
+ip dhcp pool mf237_1
+ host 192.168.84.32 255.255.255.192
+ default-router 192.168.84.1
+ dns-server 10.128.1.3 10.128.1.4
+ip dhcp pool mf237_2
+ host 192.168.84.33 255.255.255.192
+ default-router 192.168.84.1
+ dns-server 10.128.1.3 10.128.1.4
+ip dhcp pool mf237_3
+ host 192.168.84.34 255.255.255.192
+ default-router 192.168.84.1
+ dns-server 10.128.1.3 10.128.1.4
+ip dhcp pool mf237_4
+ host 192.168.84.35 255.255.255.192
+ default-router 192.168.84.1
+ dns-server 10.128.1.3 10.128.1.4
+ip dhcp pool mf237_5
+ host 192.168.84.36 255.255.255.192
+ default-router 192.168.84.1
+ dns-server 10.128.1.3 10.128.1.4
+ip dhcp pool wskhaftd0329
+ host 192.168.84.29 255.255.255.192
+ default-router 192.168.84.1
+ dns-server 10.128.1.3 10.128.1.4
+ip dhcp pool NBKHAFTD0073
+ host 192.168.84.30 255.255.255.192
+ default-router 192.168.84.1
+ dns-server 10.128.1.3 10.128.1.4
+ip dhcp pool NBKHAFTD0074
+ host 192.168.84.31 255.255.255.192
+ client-identifier 0130.d042.3aa9.1e
+ default-router 192.168.84.1
+ dns-server 10.128.1.3 10.128.1.4
+ip dhcp pool lbp226_3
+ host 192.168.84.39 255.255.255.192
+ client-identifier 0174.38b7.f80f.dc
+ default-router 192.168.84.1
+ dns-server 10.128.1.3 10.128.1.4
+ip dhcp pool Voip4S
+ host 192.168.84.4 255.255.255.192
+ default-router 192.168.84.1
+ dns-server 10.128.1.3 10.128.1.4
+ip dhcp pool lbp226_1
+ host 192.168.84.37 255.255.255.192
+ client-identifier 0174.38b7.f80f.f2
+ default-router 192.168.84.1
+ dns-server 10.128.1.3 10.128.1.4
+ip dhcp pool lbp226_2
+ host 192.168.84.38 255.255.255.192
+ client-identifier 0174.38b7.f80f.de
+ default-router 192.168.84.1
+ dns-server 10.128.1.3 10.128.1.4
 ip dhcp pool LAN
- network 10.64.38.128 255.255.255.128
- default-router 10.64.38.129
+ network 192.168.84.0 255.255.255.192
+ bootfile pxelinux.0
+ next-server 192.168.84.16
  dns-server 10.128.1.3 10.128.1.4
- domain-name mc.gcf
- lease 0 2
-ip dhcp pool WiFi16
- host 10.64.38.36 255.255.255.192
- client-identifier 014c.0082.e9a2.7d
- default-router 10.64.38.1
- option 43 hex f108.0afe.1fe6.0afe.1fe8
-ip dhcp pool WiFi24
- host 10.64.38.44 255.255.255.192
- client-identifier 01c0.8c60.2987.7d
- default-router 10.64.38.1
- option 43 hex f108.0afe.1fe6.0afe.1fe8
-ip dhcp pool ZebraGK420
- host 10.64.38.224 255.255.255.128
- hardware-address 0007.4d7b.ec64
- default-router 10.64.38.129
- dns-server 192.168.0.5 192.168.0.6
- domain-name mc.gcf
-ip dhcp pool WiFi14
- host 10.64.38.14 255.255.255.192
- client-identifier 0108.96ad.b046.b4
- default-router 10.64.38.1
- option 43 hex f108.0afe.1fe6.0afe.1fe8
-ip dhcp pool Zebra3
- host 10.64.38.149 255.255.255.128
- hardware-address 0007.4d7c.20a5
- default-router 10.64.38.129
- dns-server 192.168.0.5 192.168.0.6
- domain-name mc.gcf
-ip dhcp pool Zebra190
- host 10.64.38.190 255.255.255.192
- hardware-address 0007.4d46.f0df
- default-router 10.64.38.129
- dns-server 192.168.0.5 192.168.0.6
-ip dhcp pool WiFi12
- host 10.64.38.32 255.255.255.192
- client-identifier 0100.6bf1.cc6d.48
- default-router 10.64.38.1
- option 43 hex f108.0afe.1fe6.0afe.1fe8
-ip dhcp pool WiFi10
- host 10.64.38.56 255.255.255.192
- client-identifier 012c.5a0f.0a05.20
- option 43 hex f108.0afe.1fe6.0afe.1fe8
- default-router 10.64.38.1
-ip dhcp pool WiFi23
- host 10.64.38.49 255.255.255.192
- client-identifier 0150.8789.c127.83
- default-router 10.64.38.1
- option 43 hex f108.0afe.1fe6.0afe.1fe8
-ip dhcp pool WiFi3
- host 10.64.38.20 255.255.255.192
- client-identifier 0154.8aba.6445.20
- default-router 10.64.38.1
- option 43 hex f108.0afe.1fe6.0afe.1fe8
-ip dhcp pool ZebraGK420d
- host 10.64.38.230 255.255.255.128
- hardware-address 0007.4d48.4a3a
- default-router 10.64.38.129
- dns-server 192.168.0.5 192.168.0.6
- domain-name mc.gcf
-ip dhcp pool WLAN
- network 10.64.39.0 255.255.255.0
- default-router 10.64.39.1
+ default-router 192.168.84.1
+ lease 0 0 5
+ip dhcp pool Foxtrot_Live
+ vrf Inet-DG
+ network 10.140.84.0 255.255.255.192
+ dns-server 8.8.8.8 8.8.4.4
+ default-router 10.140.84.1
+ lease 0 0 30
+ip dhcp pool wskhaftd0323
+ host 192.168.84.23 255.255.255.192
+ default-router 192.168.84.1
  dns-server 10.128.1.3 10.128.1.4
- domain-name mc.gcf
-ip dhcp pool Print11
- host 10.64.38.146 255.255.255.192
- hardware-address 0007.4d7c.2086
- default-router 10.64.38.129
- dns-server 192.168.0.5 192.168.0.6
- domain-name mc.gcf
-ip dhcp pool WiFi8
- host 10.64.38.46 255.255.255.192
- client-identifier 0138.90a5.f9c2.78
- default-router 10.64.38.1
- option 43 hex f108.0afe.1fe6.0afe.1fe8
-ip dhcp pool Server-Faylo
- host 10.64.38.222 255.255.255.128
- client-identifier 0100.3048.6320.77
- default-router 10.64.38.129
- dns-server 192.168.0.5 192.168.0.6
- domain-name mc.gcf
-ip dhcp pool WLAN-TCD-SSID
- network 10.64.37.0 255.255.255.0
- default-router 10.64.37.1
+ip dhcp pool CAM9
+ host 192.168.84.9 255.255.255.192
+ hardware-address 0023.6386.25d6
  dns-server 10.128.1.3 10.128.1.4
- domain-name mc.gcf
-ip dhcp pool Zebra_2416
- host 10.64.38.158 255.255.255.128
- hardware-address 0007.4d7c.2416
- default-router 10.64.38.129
+ default-router 192.168.84.1
+ip dhcp pool CAM40
+ host 192.168.84.40 255.255.255.192
+ hardware-address 0023.6386.25a6
+ default-router 192.168.84.1
  dns-server 10.128.1.3 10.128.1.4
- domain-name mc.gcf
-ip dhcp pool ZebraGK4200
- host 10.64.38.130 255.255.255.128
- hardware-address 0007.4d7c.271e
- default-router 10.64.38.129
+ip dhcp pool CAM45
+ host 192.168.84.45 255.255.255.192
+ hardware-address 0023.6386.253b
  dns-server 10.128.1.3 10.128.1.4
-ip dhcp pool Zebra188
- host 10.64.38.188 255.255.255.128
- hardware-address 0007.4d48.72c1
- default-router 10.64.38.129
+ default-router 192.168.84.1
+ip dhcp pool CAM46
+ host 192.168.84.46 255.255.255.192
+ hardware-address 0023.6386.26c8
+ default-router 192.168.84.1
  dns-server 10.128.1.3 10.128.1.4
-ip dhcp pool Servers
- network 10.64.38.64 255.255.255.192
- default-router 10.64.38.65
- dns-server 10.128.1.3 10.128.1.4
- domain-name mc.gcf
- lease 0 2
-ip dhcp pool office_WiFi25
- host 10.64.38.25 255.255.255.192
- client-identifier 012c.f89b.dd5d.a0
- default-router 10.64.38.1
- option 43 hex f108.0afe.1fe6.0afe.1fe8
-ip dhcp pool print_4a38
- host 10.64.38.70 255.255.255.192
- hardware-address 0007.4d48.4a38
- default-router 10.64.38.1
- dns-server 10.128.1.3 10.128.1.4
- domain-name mc.gcf
-ip dhcp pool print_4962
- host 10.64.38.71 255.255.255.192
- hardware-address 0007.4d48.4962
- default-router 10.64.38.1
- dns-server 10.128.1.3 10.128.1.4
- domain-name mc.gcf
-ip dhcp pool Zebra274c
- host 10.64.38.67 255.255.255.192
- hardware-address 0007.4d7c.274c
- default-router 10.64.38.65
- dns-server 10.128.1.3 10.128.1.4
- domain-name mc.gcf
-ip dhcp pool CANON72
- host 10.64.38.72 255.255.255.192
- hardware-address 0007.4d7c.2027
- default-router 10.64.38.1
- dns-server 10.128.1.3 10.128.1.4
- domain-name mc.gcf
-ip dhcp pool CanonLBP214_19da
- host 10.64.38.68 255.255.255.192
- client-identifier 0100.bbc1.7319.da
- default-router 10.64.38.65
- dns-server 10.128.1.3 10.128.1.4
-ip dhcp pool WiFi26
- host 10.64.38.28 255.255.255.192
- client-identifier 01cc.db93.8952.38
- default-router 10.64.38.1
- option 43 hex f108.0afe.1fe6.0afe.1fe8
-ip dhcp pool WiFi27
- host 10.64.38.31 255.255.255.192
- client-identifier 01cc.db93.8947.a0
- default-router 10.64.38.1
- option 43 hex f108.0afe.1fe6.0afe.1fe8
-ip dhcp pool Printer74
- host 10.64.38.74 255.255.255.192
- client-identifier 0100.bbc1.7319.d1
- default-router 10.64.38.65
- dns-server 10.128.1.3 10.128.1.4
- domain-name mc.gcf
-ip dhcp pool WiFi22
- host 10.64.38.42 255.255.255.192
- client-identifier 01cc.db93.8949.18
- default-router 10.64.38.1
- option 43 hex f108.0afe.1fe6.0afe.1fe8
-ip dhcp pool WiFi21
- host 10.64.38.48 255.255.255.192
- client-identifier 01cc.db93.8992.a0
- default-router 10.64.38.1
- option 43 hex f108.0afe.1fe6.0afe.1fe8
-ip dhcp pool JK420
- host 10.64.38.66 255.255.255.192
- hardware-address 0007.4d48.7137
- default-router 10.64.38.65
-ip dhcp pool Print-KSR
- host 10.64.38.76 255.255.255.192
- client-identifier 0100.17c8.b6f5.30
- default-router 10.64.38.65
- domain-name mc.gcf
-ip dhcp pool WiFi_print_1755
- host 10.64.37.81 255.255.255.0
- client-identifier 0100.30f9.0a17.55
- default-router 10.64.37.1
- dns-server 10.128.1.3
- domain-name mc.gcf
-ip dhcp pool HP600_printer_57a9
- host 10.64.38.234 255.255.255.128
- client-identifier 01a4.5d36.5d57.a9
- default-router 10.64.38.129
- dns-server 10.128.1.3 10.128.1.4
- domain-name mc.gcf
-ip dhcp pool WiFi-Print176
- host 10.64.37.176 255.255.255.0
- hardware-address 88da.1a18.9c14
- default-router 10.64.37.1
- dns-server 10.128.1.3 10.128.1.4
-ip dhcp pool printer.c818
- host 10.64.37.199 255.255.255.0
- hardware-address 80c9.550f.c818
- default-router 10.64.37.1
- dns-server 10.128.1.3 10.128.1.4
- domain-name mc.gcf
-ip dhcp pool WLAN-TSD5-SSID
- network 10.64.40.0 255.255.254.0
- default-router 10.64.40.1
- dns-server 10.128.1.3 10.128.1.4
- domain-name mc.gcf
-ip dhcp pool printer.fb3d
- host 10.64.38.134 255.255.255.128
- hardware-address 0007.4d46.fb3d
- default-router 10.64.38.129
- dns-server 10.128.1.3 10.128.1.4
- domain-name mc.gcf
-ip dhcp pool LBP252_38_251
- host 10.64.38.251 255.255.255.128
- client-identifier 01d8.492f.e674.fa
- default-router 10.64.38.129
- dns-server 10.128.1.3 10.128.1.4
- domain-name mc.gcf
-ip dhcp pool LBP6670_38_254
- host 10.64.38.254 255.255.255.128
- client-identifier 0188.8717.55d3.13
- default-router 10.64.38.129
- dns-server 10.128.1.3 10.128.1.4
- domain-name mc.gcf
-ip dhcp pool print-495d
- host 10.64.38.253 255.255.255.128
- hardware-address 0007.4d48.495d
- default-router 10.64.38.1
-ip dhcp pool Printer-153
- host 10.64.38.153 255.255.255.128
- hardware-address 0007.4d7c.1f4e
- default-router 10.64.38.129
- dns-server 10.128.1.3 10.128.1.4
- domain-name mc.gcf
-ip dhcp pool Printer_6b:bf
- host 10.64.38.87 255.255.255.192
- client-identifier 0100.17c8.b56b.bf
- default-router 10.64.38.65
- dns-server 10.128.1.3 10.128.1.4
- domain-name mc.gcf
-ip dhcp pool printer-148
- host 10.64.38.148 255.255.255.192
- hardware-address 0007.4d48.71bc
- default-router 10.64.38.129
- dns-server 10.128.1.3 10.128.1.4
-ip dhcp pool Zebra214
- host 10.64.38.214 255.255.255.128
- hardware-address 0007.4d7c.2a6f
- default-router 10.64.38.129
- dns-server 10.128.1.3 10.128.1.4
-ip dhcp pool Zebra209
- host 10.64.38.209 255.255.255.128
- hardware-address 0007.4d46.f283
- default-router 10.64.38.129
- dns-server 10.128.1.3 10.128.1.4
-ip dhcp pool Zebra208
- host 10.64.38.208 255.255.255.128
- hardware-address 0007.4d48.71e8
- dns-server 10.128.1.3 10.128.1.4
- default-router 10.64.38.129
-ip dhcp pool Zebra238
- host 10.64.38.238 255.255.255.128
- hardware-address 0007.4d7c.2dde
- dns-server 10.128.1.3 10.128.1.4
- default-router 10.64.38.129
-ip dhcp pool printLBP214_20.e8
- host 10.64.38.85 255.255.255.192
- client-identifier 0180.3f5d.0820.e8
- default-router 10.64.38.65
- dns-server 10.128.1.3 10.128.1.4
- domain-name mc.gcf
-ip dhcp pool 236
- host 10.64.38.236 255.255.255.128
- client-identifier 0148.ea63.ea3c.ad
- default-router 10.64.38.129
- dns-server 10.128.1.3 10.128.1.4
-ip dhcp pool Vodafone
- vrf Inet-IPNet
- network 10.64.42.0 255.255.255.248
- dns-server 8.8.8.8
- default-router 10.64.42.6
- lease 0 1
-ip dhcp pool Turniket
- host 10.64.38.89 255.255.255.192
- client-identifier 0100.6035.077e.46
- default-router 10.64.38.65
- dns-server 10.128.1.3 10.128.1.4
-ip dhcp pool Turniket2
- host 10.64.38.90 255.255.255.192
- client-identifier 6827.19e2.0feb
- default-router 10.64.38.129
- dns-server 10.128.1.3 10.128.1.4
-ip dhcp pool Zebra86
- host 10.64.38.86 255.255.255.192
- hardware-address 0007.4d48.7252
- default-router 10.64.38.65
- dns-server 10.128.1.3 10.128.1.4
-ip dhcp pool Canon93
- host 10.64.38.93 255.255.255.192
- client-identifier 01d8.492f.e547.f1
- default-router 10.64.38.65
- dns-server 10.128.1.3 10.128.1.4
-ip dhcp pool DIT-SKD-19
- host 10.64.38.88 255.255.255.192
- hardware-address 1c1b.0dd5.da8c
- default-router 10.64.38.65
- dns-server 10.128.1.3 10.128.1.4
- domain-name mc.gcf
-ip dhcp pool WiFi5
- host 10.64.38.57 255.255.255.192
- client-identifier 0154.8aba.645f.60
- default-router 10.64.38.1
- option 43 hex f108.0afe.1fe6.0afe.1fe8
-ip dhcp pool WiFi7
- host 10.64.38.39 255.255.255.192
- client-identifier 0138.90a5.f9c2.5c
- default-router 10.64.38.1
- option 43 hex f108.0afe.1fe6.0afe.1fe8
-ip dhcp pool WiFi11
- host 10.64.38.40 255.255.255.192
- client-identifier 0170.708b.0fa3.c0
- default-router 10.64.38.1
- option 43 hex f108.0afe.1fe6.0afe.1fe8
-ip dhcp pool WiFi20
- host 10.64.38.38 255.255.255.192
- client-identifier 0138.90a5.d088.a4
- default-router 10.64.38.1
- option 43 hex f108.0afe.1fe6.0afe.1fe8
-ip dhcp pool WiFi9
- host 10.64.38.19 255.255.255.192
- client-identifier 0174.26ac.e7be.3c
- default-router 10.64.38.1
- option 43 hex f108.0afe.1fe6.0afe.1fe8
-ip dhcp pool WiFi25
- host 10.64.38.26 255.255.255.192
- client-identifier 0124.e9b3.6737.42
- default-router 10.64.38.1
- option 43 hex f108.0afe.1fe6.0afe.1fe8
-ip dhcp pool WiFi6
- host 10.64.38.45 255.255.255.192
- client-identifier 01d4.adbd.645c.50
- default-router 10.64.38.1
- option 43 hex f108.0afe.1fe6.0afe.1fe8
-ip dhcp pool print_4de5
- host 10.64.38.69 255.255.255.192
- hardware-address 0026.7321.4de5
- default-router 10.64.38.65
-ip dhcp pool printer_WiFi_Alpha
- host 10.64.37.250 255.255.255.0
- hardware-address 80c9.5564.4870
- default-router 10.64.37.1
- dns-server 10.128.1.3 10.128.1.4
- domain-name mc.gcf
-ip dhcp pool WiFi-Mez2
- host 10.64.38.18 255.255.255.192
- client-identifier 0150.8789.e2a5.9d
- default-router 10.64.38.1
- option 43 hex f108.0afe.1fe6.0afe.1fe8
-ip dhcp pool WiFi-Mez1
- host 10.64.38.37 255.255.255.192
- client-identifier 01d4.adbd.645b.50
- default-router 10.64.38.1
- option 43 hex f108.0afe.1fe6.0afe.1fe8
-ip dhcp pool WiFi4
- host 10.64.38.17 255.255.255.192
- client-identifier 01d4.adbd.645c.c8
- default-router 10.64.38.1
- option 43 hex f108.0afe.1fe6.0afe.1fe8
-ip dhcp pool ZebraGK420D
- host 10.64.38.178 255.255.255.128
- hardware-address 0007.4d48.49ea
- default-router 10.64.38.129
- dns-server 10.128.1.3 10.128.1.4
-ip dhcp pool printer.f28c
- host 10.64.38.207 255.255.255.128
- hardware-address 0007.4d46.f28c
- default-router 10.64.38.129
- dns-server 10.128.1.3 10.128.1.4
-ip dhcp pool WiFi13
- host 10.64.38.30 255.255.255.192
- client-identifier 0124.e9b3.6737.4d
- default-router 10.64.38.1
- option 43 hex f108.0afe.1fe6.0afe.1fe8
-ip dhcp pool WiFi-Kabinet
- host 10.64.38.23 255.255.255.192
- client-identifier 011c.6a7a.9618.60
- default-router 10.64.38.1
- option 43 hex f108.0afe.1fe6.0afe.1fe8
-ip dhcp pool WiFi-AP28-SS
- host 10.64.38.27 255.255.255.192
- client-identifier 01b0.faeb.854f.27
- default-router 10.64.38.1
- option 43 hex f108.0afe.1fe6.0afe.1fe8
