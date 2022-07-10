@@ -2,7 +2,6 @@ package input_output_work_whith_file;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 class FileriderWriter {
     public static void main(String[] args) throws FileNotFoundException {
@@ -29,8 +28,10 @@ String filePath = "C:/Users/Banduryst-A/IdeaProjects/mod7/src/input_output_work_
             for (String a : ar) {
                 if (a.contains("ip dhcp pool")) {
                     bw.write("\n");
+                    System.out.println("\n");
                 }
                 bw.write(a + "\t");
+                System.out.println((a + "\t"));
             }
         } catch (IOException e) {
             System.out.println("Unable to write file: " + file.toString());
