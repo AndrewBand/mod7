@@ -5,8 +5,7 @@ public class Exercise2 {
     private static StringBuilder result = new StringBuilder();
 
     public static void main(String[] args) {
-        int n = 15;
-        for (int i = 1; i <= n; i++) {
+        for (int i = 1; i <= 15; i++) {
             number++;
             verification();
         }
