@@ -17,26 +17,26 @@ public class JsonApiDemo {
                 "1-770-736-8031 x56442","hildegard.org",
                 new Company("Romaguera-Crona", "Multi-layered client-server neural-net",
                         "harness real-time e-markets"));
-        //1.1) создание нового объекта
+        //1.1 создание нового объекта
         User createdUser = HttpUtil.putUser(URI.create(USERS), defaultUser);
         System.out.println(createdUser);
-        //1.2) обновление объекта
+        //1.2 обновление объекта
         User updatedUser = HttpUtil.postUser(URI.create(USERS), defaultUser);
         System.out.println(updatedUser);
-        //1.3) удаление объекта
+        //1.3 удаление объекта
         HttpUtil.deleteUser(URI.create(USERS), 11);
-        //1.4) получение информации обо всех пользователях
+        //1.4 получение информации обо всех пользователях
         List<User> allUsers = HttpUtil.getUsers(URI.create(USERS));
         System.out.println(allUsers);
-        //1.5) получение информации о пользователе с определенным id
+        //1.5 получение информации о пользователе с определенным id
         User userById = HttpUtil.getUserById(URI.create(USERS),1);
         System.out.println(userById);
-        //1.6) получение информации о пользователе с определенным username
+        //1.6 получение информации о пользователе с определенным username
         User userName = HttpUtil.getUserByUserName(URI.create(USERS), "Delphine");
         System.out.println(userName);
-        //все комментарии к последнему посту определенного пользователя
+        //2 все комментарии к последнему посту определенного пользователя
         HttpUtil.getUserComments(2);
-        //3)все открытые задачи для пользователя
+        //3 все открытые задачи для пользователя
         List<Todo> allTodos = HttpUtil.getUserTodos(URI.create(USERS), 1);
         System.out.println(allTodos);
 
