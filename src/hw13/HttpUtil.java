@@ -14,7 +14,7 @@ import java.util.List;
 
 public class HttpUtil {
     private static final HttpClient CLIENT = HttpClient.newHttpClient();
-    private static final Gson gson = new Gson();
+    private static final Gson GSON = new Gson();
 
     public static User getUserById (URI uri, Integer id) throws IOException, InterruptedException {
         HttpRequest request = HttpRequest.newBuilder()
@@ -22,7 +22,7 @@ public class HttpUtil {
                 .GET()
                 .build();
         HttpResponse<String> response = CLIENT.send(request, HttpResponse.BodyHandlers.ofString());
-        return gson.fromJson(response.body(), User.class);
+        return GSON.fromJson(response.body(), User.class);
     }
 
     public static User getUserByUserName (URI uri, String username) throws IOException, InterruptedException {
@@ -31,7 +31,7 @@ public class HttpUtil {
                 .GET()
                 .build();
         HttpResponse<String> response = CLIENT.send(request, HttpResponse.BodyHandlers.ofString());
-        List<User> result = gson.fromJson(response.body(), new TypeToken<List<User>>(){}.getType());
+        List<User> result = GSON.fromJson(response.body(), new TypeToken<List<User>>(){}.getType());
         return result.get(0);
     }
 
@@ -41,18 +41,18 @@ public class HttpUtil {
                 .GET()
                 .build();
         HttpResponse<String> response = CLIENT.send(request, HttpResponse.BodyHandlers.ofString());
-        return gson.fromJson(response.body(), new TypeToken<List<User>>(){}.getType());
+        return GSON.fromJson(response.body(), new TypeToken<List<User>>(){}.getType());
     }
 
     public static User postUser(URI uri, User user) throws IOException, InterruptedException {
-        String requestBody = gson.toJson(user);
+        String requestBody = GSON.toJson(user);
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(uri)
                 .POST(HttpRequest.BodyPublishers.ofString(requestBody))
                 .header("Content-type", "application/json")
                 .build();
         HttpResponse<String> response = CLIENT.send(request, HttpResponse.BodyHandlers.ofString());
-        return gson.fromJson(response.body(), User.class);
+        return GSON.fromJson(response.body(), User.class);
     }
 
     public static void deleteUser (URI uri, Integer id) throws IOException, InterruptedException {
@@ -66,7 +66,7 @@ public class HttpUtil {
     }
 
     public static User putUser (URI uri, User user) throws IOException, InterruptedException {
-        String requestBody = gson.toJson(user);
+        String requestBody = GSON.toJson(user);
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(uri+"/"+String.valueOf(user.getId())))
                 .PUT(HttpRequest.BodyPublishers.ofString(requestBody))
@@ -74,7 +74,7 @@ public class HttpUtil {
                 .build();
         HttpResponse<String> response = CLIENT.send(request, HttpResponse.BodyHandlers.ofString());
         System.out.println("Response status of put User is " + response.statusCode());
-        return gson.fromJson(response.body(), User.class);
+        return GSON.fromJson(response.body(), User.class);
 
     }
     public static List<Todo> getUserTodos (URI uri, Integer id) throws IOException, InterruptedException {
@@ -83,7 +83,7 @@ public class HttpUtil {
                 .GET()
                 .build();
         HttpResponse<String> response = CLIENT.send(request, HttpResponse.BodyHandlers.ofString());
-        return gson.fromJson(response.body(), new TypeToken<List<Todo>>(){}.getType());
+        return GSON.fromJson(response.body(), new TypeToken<List<Todo>>(){}.getType());
     }
 
     public static void getUserComments (Integer userId) throws IOException, InterruptedException {
@@ -93,7 +93,7 @@ public class HttpUtil {
                 .GET()
                 .build();
         HttpResponse<String> response = CLIENT.send(request, HttpResponse.BodyHandlers.ofString());
-        List<Comment> comments = gson.fromJson(response.body(), new TypeToken<List<Comment>>(){}.getType());
+        List<Comment> comments = GSON.fromJson(response.body(), new TypeToken<List<Comment>>(){}.getType());
         writeCommentsToJson(comments, userId, maxPostId);
     }
 
@@ -103,7 +103,7 @@ public class HttpUtil {
                 .GET()
                 .build();
         HttpResponse<String> response = CLIENT.send(request, HttpResponse.BodyHandlers.ofString());
-        List<Post> posts = gson.fromJson(response.body(), new TypeToken<List<Post>>(){}.getType());
+        List<Post> posts = GSON.fromJson(response.body(), new TypeToken<List<Post>>(){}.getType());
         Integer maxPostId = posts.stream()
                 .map(Post::getId)
                 .max(Integer::compare)
@@ -114,7 +114,7 @@ public class HttpUtil {
     private static void writeCommentsToJson (List<Comment> comments, Integer userId, int maxPostId){
         try (PrintWriter out = new PrintWriter(new FileWriter("user-"+ userId + "-post-" + maxPostId + "-comments.json")))
         {
-            out.write(gson.toJson(comments));
+            out.write(GSON.toJson(comments));
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }

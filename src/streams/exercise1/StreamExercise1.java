@@ -37,6 +37,12 @@ public class StreamExercise1 {
 //        maxEmployee = Optional.ofNullable(null);
         final Employee emmpl = maxEmployee.orElse( new Employee("defName", 0));
         System.out.println("emmpl = " + emmpl);
+        System.out.println("Max age = " + emmpl.getAge());
+        Integer maxAge = listEmployee.stream()
+                .map(Employee::getAge)
+                .max(Integer::compare)
+                .get();
+        System.out.println("maxAge = " + maxAge);
 //5 просумувати елементи масива
         List<Integer> number = asList(1, 2, 3, 4, 5);
         Integer summNumber = number.stream()
