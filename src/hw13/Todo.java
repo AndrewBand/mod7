@@ -40,7 +40,7 @@ public class Todo {
 
     @Override
     public String toString() {
-        return "{" +
+        return "\n{" +
                 "userId=" + userId +
                 ", id=" + id +
                 ", title='" + title + '\'' +
