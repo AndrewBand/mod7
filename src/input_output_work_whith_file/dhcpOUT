@@ -1,0 +1,44 @@
+<<< DHCP >>>>
+
+ip dhcp pool Credits	 network 10.133.84.0 255.255.255.240	 default-router 10.133.84.1	 dns-server 10.128.1.3 10.128.1.4	 lease 2	
+ip dhcp pool ITMaster	 vrf Inet-DG	 network 10.135.84.32 255.255.255.224	 default-router 10.135.84.33	 dns-server 8.8.8.8 8.8.4.4	 lease 0 3	
+ip dhcp pool Foxseller	 network 10.144.84.0 255.255.255.224	 default-router 10.144.84.1	 dns-server 10.128.1.3 10.128.1.4	
+ip dhcp pool WiFi-AP1	 host 10.254.84.4 255.255.255.240	 client-identifier 0170.f096.cc63.30	 default-router 10.254.84.1	 option 43 hex f108.0afe.1fe6.0afe.1fe8	
+ip dhcp pool WiFi-AP2	 host 10.254.84.5 255.255.255.240	 client-identifier 0170.f096.ce02.a8	 default-router 10.254.84.1	 option 43 hex f108.0afe.1fe6.0afe.1fe8	
+ip dhcp pool wskhaftd0311	 host 192.168.84.11 255.255.255.192	 client-identifier 01a4.bb6d.77fb.02	 default-router 192.168.84.1	 dns-server 10.128.1.3 10.128.1.4	
+ip dhcp pool wskhaftd0312	 host 192.168.84.12 255.255.255.192	 client-identifier 01a4.bb6d.783d.8d	 default-router 192.168.84.1	 dns-server 10.128.1.3 10.128.1.4	
+ip dhcp pool wskhaftd0313	 host 192.168.84.13 255.255.255.192	 client-identifier 01a4.bb6d.7806.e0	 default-router 192.168.84.1	 dns-server 10.128.1.3 10.128.1.4	
+ip dhcp pool wskhaftd0314	 host 192.168.84.14 255.255.255.192	 client-identifier 01a4.bb6d.7808.2a	 default-router 192.168.84.1	 dns-server 10.128.1.3 10.128.1.4	
+ip dhcp pool wskhaftd0315	 host 192.168.84.15 255.255.255.192	 client-identifier 01a4.bb6d.783a.17	 default-router 192.168.84.1	 dns-server 10.128.1.3 10.128.1.4	
+ip dhcp pool wskhaftd0316	 host 192.168.84.16 255.255.255.192	 client-identifier 01a4.bb6d.783f.6a	 default-router 192.168.84.1	 dns-server 10.128.1.3 10.128.1.4	
+ip dhcp pool wskhaftd0317	 host 192.168.84.17 255.255.255.192	 client-identifier 01a4.bb6d.783f.64	 default-router 192.168.84.1	 dns-server 10.128.1.3 10.128.1.4	
+ip dhcp pool wskhaftd0318	 host 192.168.84.18 255.255.255.192	 client-identifier 01a4.bb6d.7806.af	 default-router 192.168.84.1	 dns-server 10.128.1.3 10.128.1.4	
+ip dhcp pool wskhaftd0319	 host 192.168.84.19 255.255.255.192	 client-identifier 01a4.bb6d.783f.5c	 default-router 192.168.84.1	 dns-server 10.128.1.3 10.128.1.4	
+ip dhcp pool wskhaftd0320	 host 192.168.84.20 255.255.255.192	 client-identifier 01a4.bb6d.783f.94	 default-router 192.168.84.1	 dns-server 10.128.1.3 10.128.1.4	
+ip dhcp pool wskhaftd0321	 host 192.168.84.21 255.255.255.192	 client-identifier 01a4.bb6d.7806.a8	 default-router 192.168.84.1	 dns-server 10.128.1.3 10.128.1.4	
+ip dhcp pool wskhaftd0322	 host 192.168.84.22 255.255.255.192	 client-identifier 01a4.bb6d.783d.c6	 default-router 192.168.84.1	 dns-server 10.128.1.3 10.128.1.4	
+ip dhcp pool wskhaftd0324	 host 192.168.84.24 255.255.255.192	 default-router 192.168.84.1	 dns-server 10.128.1.3 10.128.1.4	
+ip dhcp pool wskhaftd0325	 host 192.168.84.25 255.255.255.192	 client-identifier 013c.7c3f.bc05.97	 default-router 192.168.84.1	 dns-server 10.128.1.3 10.128.1.4	
+ip dhcp pool wskhaftd0326	 host 192.168.84.26 255.255.255.192	 default-router 192.168.84.1	 dns-server 10.128.1.3 10.128.1.4	
+ip dhcp pool wskhaftd0327	 host 192.168.84.27 255.255.255.192	 client-identifier 013c.7c3f.bc06.d4	 default-router 192.168.84.1	 dns-server 10.128.1.3 10.128.1.4	
+ip dhcp pool wskhaftd0328	 host 192.168.84.28 255.255.255.192	 client-identifier 013c.7c3f.bc01.c5	 default-router 192.168.84.1	 dns-server 10.128.1.3 10.128.1.4	
+ip dhcp pool SmartTV	 vrf Inet-DG	 network 10.135.84.0 255.255.255.224	 dns-server 8.8.8.8 8.8.4.4	 default-router 10.135.84.1	 lease 0 3	
+ip dhcp pool mf237_1	 host 192.168.84.32 255.255.255.192	 default-router 192.168.84.1	 dns-server 10.128.1.3 10.128.1.4	
+ip dhcp pool mf237_2	 host 192.168.84.33 255.255.255.192	 default-router 192.168.84.1	 dns-server 10.128.1.3 10.128.1.4	
+ip dhcp pool mf237_3	 host 192.168.84.34 255.255.255.192	 default-router 192.168.84.1	 dns-server 10.128.1.3 10.128.1.4	
+ip dhcp pool mf237_4	 host 192.168.84.35 255.255.255.192	 default-router 192.168.84.1	 dns-server 10.128.1.3 10.128.1.4	
+ip dhcp pool mf237_5	 host 192.168.84.36 255.255.255.192	 default-router 192.168.84.1	 dns-server 10.128.1.3 10.128.1.4	
+ip dhcp pool wskhaftd0329	 host 192.168.84.29 255.255.255.192	 default-router 192.168.84.1	 dns-server 10.128.1.3 10.128.1.4	
+ip dhcp pool NBKHAFTD0073	 host 192.168.84.30 255.255.255.192	 default-router 192.168.84.1	 dns-server 10.128.1.3 10.128.1.4	
+ip dhcp pool NBKHAFTD0074	 host 192.168.84.31 255.255.255.192	 client-identifier 0130.d042.3aa9.1e	 default-router 192.168.84.1	 dns-server 10.128.1.3 10.128.1.4	
+ip dhcp pool lbp226_3	 host 192.168.84.39 255.255.255.192	 client-identifier 0174.38b7.f80f.dc	 default-router 192.168.84.1	 dns-server 10.128.1.3 10.128.1.4	
+ip dhcp pool Voip4S	 host 192.168.84.4 255.255.255.192	 default-router 192.168.84.1	 dns-server 10.128.1.3 10.128.1.4	
+ip dhcp pool lbp226_1	 host 192.168.84.37 255.255.255.192	 client-identifier 0174.38b7.f80f.f2	 default-router 192.168.84.1	 dns-server 10.128.1.3 10.128.1.4	
+ip dhcp pool lbp226_2	 host 192.168.84.38 255.255.255.192	 client-identifier 0174.38b7.f80f.de	 default-router 192.168.84.1	 dns-server 10.128.1.3 10.128.1.4	
+ip dhcp pool LAN	 network 192.168.84.0 255.255.255.192	 bootfile pxelinux.0	 next-server 192.168.84.16	 dns-server 10.128.1.3 10.128.1.4	 default-router 192.168.84.1	 lease 0 0 5	
+ip dhcp pool Foxtrot_Live	 vrf Inet-DG	 network 10.140.84.0 255.255.255.192	 dns-server 8.8.8.8 8.8.4.4	 default-router 10.140.84.1	 lease 0 0 30	
+ip dhcp pool wskhaftd0323	 host 192.168.84.23 255.255.255.192	 default-router 192.168.84.1	 dns-server 10.128.1.3 10.128.1.4	
+ip dhcp pool CAM9	 host 192.168.84.9 255.255.255.192	 hardware-address 0023.6386.25d6	 dns-server 10.128.1.3 10.128.1.4	 default-router 192.168.84.1	
+ip dhcp pool CAM40	 host 192.168.84.40 255.255.255.192	 hardware-address 0023.6386.25a6	 default-router 192.168.84.1	 dns-server 10.128.1.3 10.128.1.4	
+ip dhcp pool CAM45	 host 192.168.84.45 255.255.255.192	 hardware-address 0023.6386.253b	 dns-server 10.128.1.3 10.128.1.4	 default-router 192.168.84.1	
+ip dhcp pool CAM46	 host 192.168.84.46 255.255.255.192	 hardware-address 0023.6386.26c8	 default-router 192.168.84.1	 dns-server 10.128.1.3 10.128.1.4	

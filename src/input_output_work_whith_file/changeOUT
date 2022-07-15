@@ -1,0 +1,135 @@
+int GigabitEthernet4/2
+shutdown
+no shutdown
+int GigabitEthernet5/20
+shutdown
+no shutdown
+int GigabitEthernet4/34
+shutdown
+no shutdown
+int GigabitEthernet4/32
+shutdown
+no shutdown
+int GigabitEthernet6/38
+shutdown
+no shutdown
+int GigabitEthernet6/18
+shutdown
+no shutdown
+int GigabitEthernet6/15
+shutdown
+no shutdown
+int GigabitEthernet5/2
+shutdown
+no shutdown
+int GigabitEthernet4/11
+shutdown
+no shutdown
+int GigabitEthernet4/6
+shutdown
+no shutdown
+int GigabitEthernet5/3
+shutdown
+no shutdown
+int GigabitEthernet5/34
+shutdown
+no shutdown
+int GigabitEthernet6/19
+shutdown
+no shutdown
+int GigabitEthernet6/26
+shutdown
+no shutdown
+int GigabitEthernet5/21
+shutdown
+no shutdown
+int GigabitEthernet4/17
+shutdown
+no shutdown
+int GigabitEthernet3/38
+shutdown
+no shutdown
+int GigabitEthernet5/13
+shutdown
+no shutdown
+int GigabitEthernet5/37
+shutdown
+no shutdown
+int GigabitEthernet6/42
+shutdown
+no shutdown
+int GigabitEthernet2/43
+shutdown
+no shutdown
+int GigabitEthernet4/8
+shutdown
+no shutdown
+int GigabitEthernet5/41
+shutdown
+no shutdown
+int GigabitEthernet5/9
+shutdown
+no shutdown
+int GigabitEthernet3/9
+shutdown
+no shutdown
+int GigabitEthernet5/42
+shutdown
+no shutdown
+int GigabitEthernet6/44
+shutdown
+no shutdown
+int GigabitEthernet6/12
+shutdown
+no shutdown
+int GigabitEthernet6/6
+shutdown
+no shutdown
+int GigabitEthernet4/18
+shutdown
+no shutdown
+int GigabitEthernet5/24
+shutdown
+no shutdown
+int GigabitEthernet4/16
+shutdown
+no shutdown
+int GigabitEthernet6/31
+shutdown
+no shutdown
+int GigabitEthernet6/11
+shutdown
+no shutdown
+int GigabitEthernet6/20
+shutdown
+no shutdown
+int GigabitEthernet6/10
+shutdown
+no shutdown
+int GigabitEthernet6/36
+shutdown
+no shutdown
+int GigabitEthernet5/12
+shutdown
+no shutdown
+int GigabitEthernet3/27
+shutdown
+no shutdown
+int GigabitEthernet5/1
+shutdown
+no shutdown
+int GigabitEthernet5/4
+shutdown
+no shutdown
+int GigabitEthernet6/29
+shutdown
+no shutdown
+int GigabitEthernet3/28
+shutdown
+no shutdown
+int GigabitEthernet5/43
+shutdown
+no shutdown
+int GigabitEthernet2/37
+shutdown
+no shutdown
