@@ -20,6 +20,7 @@ public enum UserType1 {
     GUEST("guest");
 
     private String name;
+
     UserType1(String name) {
         this.name = name;
     }

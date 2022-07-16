@@ -9,7 +9,7 @@ class WriterToFile {
 static void writerToFile(String toWrite, String fileOutName) {
     File fileOut = new File(fileOutName);
 
-    try (BufferedWriter bw = new BufferedWriter(new FileWriter(fileOut, true))) {
+    try (BufferedWriter bw = new BufferedWriter(new FileWriter(fileOut, true))) { // щоб дописувати в файл добавляєм параметр true
 
                 bw.write(toWrite);
 

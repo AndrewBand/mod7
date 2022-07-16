@@ -6,17 +6,17 @@ import java.util.Arrays;
 import java.util.Collections;
 
 class UserReader {
-    public void readTxtToJson(String fileInName, String fileOutName) {
+    public void readTxtToJsonManuals(String fileInName, String fileOutName) {
         String line = null;
 
-        File fileOut2 = new File(fileOutName);
+        File fileOut2 = new File(fileInName);
         FileWriter fw = null;
 
         try {
-            fw = new FileWriter(fileOut2);
+            fw = new FileWriter(fileOutName);
         } catch (IOException e) {
             e.printStackTrace();
-            System.out.println("Unable to create file: " + fileOut2.toString());
+            System.out.println("Unable to create file: " + fileOutName.toString());
         }
 
         ArrayList<String> ar = new ArrayList<String>();

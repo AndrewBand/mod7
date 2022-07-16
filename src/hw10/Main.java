@@ -9,11 +9,11 @@ public class Main {
 //        final String inPath = "C:/Users/Banduryst-A/IdeaProjects/mod7/src/hw10/file.txt";
         final String inPath = "file.txt";
         final String outPath = "fileOut.json";
-        ur.readTxtToJson(inPath, outPath);
+        ur.readTxtToJsonManuals(inPath, outPath);
 
         UserReaderJson urG = new UserReaderJson();
         final String inPath2 = "file2.txt";
-        final String outPath2 = "fileOutGson.txt";
+        final String outPath2 = "fileOutGson.json";
         urG.readTxtToJson(inPath2, outPath2);
 
         TelephoneNumberChecker tc = new TelephoneNumberChecker();

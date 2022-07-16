@@ -24,6 +24,8 @@ public class Main1 {
         System.out.println("uTyp.getName() = " + uTyp.getName());
 
         System.out.println("admin.getName() = " + admin.getName());
+
+        System.out.println("UserType1.ADMIN.getName() = " + UserType1.ADMIN.getName());
 //        if(admin==null) {
 //            System.out.println("Wrong enum");
 //        } else {
